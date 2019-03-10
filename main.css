@@ -1,0 +1,232 @@
+/*universal setting for page*/
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+header {
+  background: purple;
+  overflow: hidden;
+  padding: 1em 0;
+  width: 100%;
+}
+
+header h1 {
+  padding: 1em .5em
+}
+
+header li {
+   display: inline-block;
+    color: white;
+}
+header a {
+  display: inline-block;
+  width: 85px;
+  text-align: center;
+  text-decoration: none;
+  background: white;
+  padding: .5em 1em;
+  margin: 0 .5em;
+
+}
+
+header a:hover, header a:focus {
+  background: #4A1194;
+  color: white;
+}
+
+/*float:right moves entire navigation to the right */
+header nav {
+  margin-left: 1em;
+  float: right;
+ }
+
+ main a {
+   color: purple;
+   text-align: center;
+ }
+
+section.two_col {
+  background: ghostwhite;
+  padding: 1em;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+article.two_col {
+  width: 60%;
+  float: left;
+  padding: 1em 6em 2em 0;
+  box-sizing: border-box;
+}
+
+aside.two_col {
+  float:left;
+  width: 30%;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+section.two_col h2 {
+  margin-bottom: .75em;
+}
+
+aside.two_col h3 {
+  margin-bottom: .75em;
+
+}
+
+/* 3-Column Section Styles */
+
+section.three_col {
+  background: purple;
+  padding: 1em;
+  overflow: hidden;
+}
+.three_col aside {
+  float: left;
+  width: 20%;
+}
+
+
+/* CSS Column Styles*/
+/*Sets the number of columns, the distance between and the vertical line*/
+#css_columns {
+    column-count: 3;
+    column-gap: 2em; /*distance between columns*/
+    column-rule: 2px solid black; /*vertical line or ruler that goes between columns*/
+
+}
+
+/* Unable to set height of columns - set CSS to adjust paragraphs within columns*/
+section.css_columns {
+  padding: 1em;
+  background: ghostwhite;
+}
+
+#css_columns h2 {
+  margin-bottom: 1em;
+  color: black;
+}
+
+#css_columns p {
+    padding: 1 em;
+    margin-bottom: 1em;
+}
+/* Positioned Elements Styles*/
+
+/*box-sizing:border-box accounts for any padding and/or border in the size of the element
+overflow:hidden is added to keep the floated content within the container
+*/
+section.pos_elements {
+  background: grey;
+  padding: 1em;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.pos_elements article h5 {
+  padding-bottom: .75em;
+}
+
+/* setting the width and floating the articles to the left aligns them horizontally*/
+.pos_elements article {
+  float: left;
+  width: 30%;
+  margin: 2em 0;
+ }
+
+/*targets the 1st article in the .pos_elements section */
+section.pos_elements article:nth-of-type(1)
+{
+  margin-left: 10%;
+}
+/*targets the 4th article in the .pos_elements section and clears it so it flows the next row */
+section.pos_elements article:nth-of-type(4) {
+  clear: left;
+  margin-left: 10%;
+}
+
+/* Blocks for Quicklinks
+*/
+div.container1 {
+  border: 10px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+div.block1 {
+  height: 125px;
+  width: 125px;
+  background: purple;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+
+div.container2 {
+  border: 10px solid purple;
+  height: 200px;
+  width: 200px;
+}
+
+div.block2 {
+  height: 125px;
+  width: 125px;
+  background: black;
+  margin: auto;
+}
+
+div.container3 {
+  border: 10px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+div.block3 {
+  height: 125px;
+  width: 125px;
+  background: purple;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+.pos_elements h2 {
+  padding-bottom: 1em;
+}
+
+/* Footer Styles
+The clear:both property is added to keep the footer content from being dragged into
+the space of any floated elements before it*/
+footer {
+  background-color:purple;
+  padding: 2em 2em 5em 2em;
+  text-align: center;
+  clear: both;
+
+}
+
+/* Media Queries that set styels for certain screen sizes --For responsive design on smaller mobile devices (tablet or phone)
+The responsiveness in this design is very limited as it is not focus of the lesson.  This will be addressed in greater detail later in the semester*/
+
+@media screen and (max-width: 850px) {
+
+  header nav li {
+    clear; left;
+  }
+  header nav {
+    float: none;
+
+  }
+
+  header a {
+    width: 525px;
+    margin-bottom: 1em;
+  }
+  /* CSS declaration that sets styles on all articles in teh .pos_element section */
+  section.pos_elements>article {
+    clear: left;
+    margin-left: 10%;
+  }
+}
